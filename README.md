@@ -46,44 +46,44 @@ pcDuino9是一个高性能平台，拥有强大的多线程运算能力、图形
 * pcDuino9  
 
 
-|Pin Num|  Name    |Linux GPIO|Pin Num|  Name    |Linux GPIO|
-| ----- |: ------ :|: ------ :|: --- :|: ------ :| --------:|
-| 1     | 3.3V     |          | 2     |  VDD5V   |          |
-| 3     | I2C4_SDA |          | 4     |  VDD5V   |          |
-| 5     | I2C4_SCL |          | 6     |  GND     |          |
-| 7     | GPIO_0   |   56     | 8     | UART2_TX |          |
-| 9     | GND      |          | 10    | UART2_RX |          |
-| 11    | GPIO_1   |   57     | 12    | GPIO_8   | 63       |
-| 13    | GPIO_2   |   58     | 14    | GND      |          |
-| 15    | GPIO_3   |   59     | 16    | GPIO_9   | 64       |
-| 17    | 3.3V     |          | 18    | GPIO_10  | 65       |
-| 19    |SPI0_MOSI |          | 20    | GND      |          |
-| 21    |SPI0_MISO |          | 22    | GPIO_11  | 66       |
-| 23    |SPI0_SCLK |          | 24    | SPI0_CS0 |          |
-| 25    | GND      |          | 26    | SPI0_CS1 |          |
-| 27    | I2C3_SDA |          | 28    | I2C3_SCL |          |
-| 29    | GPIO_4   |   60     | 30    | GND      |          |
-| 31    | GPIO_5   |   61     | 32    | GPIO_12  | 68       |
-| 33    | GPIO_6   |   62     | 34    | GND      |          |
-| 35    | UART3_CTS|          | 36    | UART2_TX |          |
-| 37    | GPIO_7   |   225    | 38    | UART2_RX |          |
-| 39    | GND      |          | 40    | UART2_RTS|          |
+|Pin Num|  Name    |Linux GPIO|Pin Num|  Name    |Linux GPIO|  
+| ----- |: ------ :|: ------ :|: --- :|: ------ :| --------:|  
+| 1     | 3.3V     |          | 2     |  VDD5V   |          |  
+| 3     | I2C4_SDA |          | 4     |  VDD5V   |          |  
+| 5     | I2C4_SCL |          | 6     |  GND     |          |  
+| 7     | GPIO_0   |   56     | 8     | UART2_TX |          |  
+| 9     | GND      |          | 10    | UART2_RX |          |  
+| 11    | GPIO_1   |   57     | 12    | GPIO_8   | 63       |  
+| 13    | GPIO_2   |   58     | 14    | GND      |          |  
+| 15    | GPIO_3   |   59     | 16    | GPIO_9   | 64       |  
+| 17    | 3.3V     |          | 18    | GPIO_10  | 65       |  
+| 19    |SPI0_MOSI |          | 20    | GND      |          |  
+| 21    |SPI0_MISO |          | 22    | GPIO_11  | 66       |  
+| 23    |SPI0_SCLK |          | 24    | SPI0_CS0 |          |  
+| 25    | GND      |          | 26    | SPI0_CS1 |          |  
+| 27    | I2C3_SDA |          | 28    | I2C3_SCL |          |  
+| 29    | GPIO_4   |   60     | 30    | GND      |          |  
+| 31    | GPIO_5   |   61     | 32    | GPIO_12  | 68       |  
+| 33    | GPIO_6   |   62     | 34    | GND      |          |  
+| 35    | UART3_CTS|          | 36    | UART2_TX |          |  
+| 37    | GPIO_7   |   225    | 38    | UART2_RX |          |  
+| 39    | GND      |          | 40    | UART2_RTS|          |  
+ 
+
+* BMC STM32F411     
 
 
-* BMC STM32F411   
-
-
-|Pin Num|  Name    |STM32 GPIO|Pin Num|  Name    |STM32 GPIO|
-| ----- |: ------ :|: ------ :|: --- :|: ------ :| --------:|
-| 41    | PWM2_CH1 | PA0      | 42    | PWM3_CH1 |  PA8     |
-| 43    | PWM2_CH2 | PA1      | 44    | PWM3_CH4 |  PA11    |
-| 45    | PWM2_CH3 | PA2      | 46    | IN9_EXT  |  PB1     |
-| 47    | PWM2_CH4 | PA3      | 48    | SLOT_ID0 |  PB9     |
-| 49    | BMC_SDA  | PB12     | 50    | SLOT_ID1 |  PB13    |
-| 51    | BMC_SCL  | PB10     | 52    | SLOT_ID2 |  PB14    |
-| 53    | VDD3.3V  |          | 54    | SLOT_ID3 |  PB15    |
-| 55    | GND      |          | 56    | GND      |          |
-
+|Pin Num|  Name    |STM32 GPIO|Pin Num|  Name    |STM32 GPIO|  
+| ----- |: ------ :|: ------ :|: --- :|: ------ :| --------:|  
+| 41    | PWM2_CH1 | PA0      | 42    | PWM3_CH1 |  PA8     |  
+| 43    | PWM2_CH2 | PA1      | 44    | PWM3_CH4 |  PA11    |  
+| 45    | PWM2_CH3 | PA2      | 46    | IN9_EXT  |  PB1     |  
+| 47    | PWM2_CH4 | PA3      | 48    | SLOT_ID0 |  PB9     |  
+| 49    | BMC_SDA  | PB12     | 50    | SLOT_ID1 |  PB13    |  
+| 51    | BMC_SCL  | PB10     | 52    | SLOT_ID2 |  PB14    |  
+| 53    | VDD3.3V  |          | 54    | SLOT_ID3 |  PB15    |  
+| 55    | GND      |          | 56    | GND      |          |  
+  
 
 ## 快速入门
 
@@ -100,15 +100,10 @@ pcDuino9是一个高性能平台，拥有强大的多线程运算能力、图形
 ###### 连接设备
 
 * 1.确保设备连接好电源适配器并处于通电状态。
-
 * 2.用 Micro USB OTG 线连接好设备和主机。
-
 * 3.按住设备上的 RECOVERY （恢复）键并保持。
-
 * 4.短按一下 RRESET（复位）键。
-
 * 5.大约两秒钟后，松开 RECOVERY 键。
-
 * 6.注意：如果发现按了 RESET 键后还是没有发现设备，请在保持 RECOVERY 键按下的同时，长按一下 PWRKEY 键，然后才松开 RECOVERY 键。
 
 主机应该会提示发现新硬件并配置驱动。打开设备管理器，会见到新设备"Rockusb Device" 出现，如下图。如果没有，则需要返回上一步重新安装驱动。
@@ -126,11 +121,8 @@ pcDuino9是一个高性能平台，拥有强大的多线程运算能力、图形
 
 
 * 1.切换至"升级固件"页。
-
 * 2.按"固件"按钮，打开要升级的固件文件。升级工具会显示详细的固件信息。
-
 * 3.按"升级"按钮开始升级。
-
 * 如果升级失败，可以尝试先按"擦除Flash"按钮来擦除 Flash，然后再升级。
 
 
@@ -157,7 +149,6 @@ RK 提供了一个 Linux 下的命令行工具 upgrade_tool，支持统一固件
 开源工具则有两个选择:
 
 * rkflashtool https://github.com/Galland/rkflashtool_rk3066
-
 * rkflashkit https://github.com/linuxerwang/rkflashkit
 
 它们都仅支持分区映像烧写，不支持统一固件。rkflashtool 是命令行工具，rkflashkit 有图形界面，后加了命令行支持，更是好用。以下仅对 rkflashkit 做介绍。
@@ -170,11 +161,8 @@ Linux 下无须安装设备驱动，参照 Windows 章节连接设备则可。
 
 ```
 tar xf Linux_UpgradeTool_v1.2.tar.gz
-
 cd Linux_UpgradeTool_v1.2
-
 sudo mv upgrade_tool /usr/local/bin
-
 sudo chown root:root /usr/local/bin/upgrade_tool
 ```
 
@@ -189,19 +177,12 @@ sudo upgrade_tool uf update.img
 
 ```
 sudo upgrade_tool di -b /path/to/boot.img
-
 sudo upgrade_tool di -k /path/to/kernel.img
-
 sudo upgrade_tool di -s /path/to/system.img
-
 sudo upgrade_tool di -r /path/to/recovery.img
-
 sudo upgrade_tool di -m /path/to/misc.img
-
 sudo upgrade_tool di resource /path/to/resource.img
-
 sudo upgrade_tool di -p paramater   #烧写 parameter
-
 sudo upgrade_tool ul bootloader.bin # 烧写 bootloader
 ```
 
@@ -210,7 +191,6 @@ sudo upgrade_tool ul bootloader.bin # 烧写 bootloader
 
 ```
 sudo upgrade_tool lf   # 低级格式化
-
 sudo upgrade_tool ef   # 擦除
 ```
 
@@ -221,15 +201,10 @@ sudo upgrade_tool ef   # 擦除
 
 ```
  sudo apt-get install build-essential fakeroot 
-
  git clone https://github.com/linuxerwang/rkflashkit
-
  cd rkflashkit
-
  ./waf debian
-
  sudo apt-get install python-gtk2
-
  sudo dpkg -i rkflashkit_0.1.2_all.deb
 ```
 
@@ -247,55 +222,37 @@ sudo rkflashkit
 
 ```
 $ rkflashkit --help
-
 Usage: <cmd> [args] [<cmd> [args]...]
-
-
 part                              List partition
-
 flash @<PARTITION> <IMAGE FILE>   Flash partition with image file
-
 cmp @<PARTITION> <IMAGE FILE>     Compare partition with image file
-
 backup @<PARTITION> <IMAGE FILE>  Backup partition to image file
-
 erase  @<PARTITION>               Erase partition
-
 reboot                            Reboot device
-
 For example, flash device with boot.img and kernel.img, then reboot:
-
 sudo rkflashkit flash @boot boot.img @kernel.img kernel.img reboot
 ```
 
 #### 3.SD卡启动系统
 
 * 下载xxxx.img系统镜像
-
 * 准备一张内存卡（4GB以上C10）
-
 * 使用dd命令将系统复制到SD
-
 * 将卡插在pcDuino9，开机需要按着MASKROM键从TF卡启动
 
 
 #### 4.pcDuino9硬件操作
 
 硬件操作基于NightWiring
-
 现在它是一个跨平台的C++库控制的硬件接口，包括UART、I2C、SPI和GPIO。大部分的代码是从wiringpi。
-
 GPIO的功能是基于sysfs的现在，这是稍微慢一点，但灵活。
-
 
 * git clone https://github.com/nightseas/nightWiring.git
 
 
 ```
 cd nightWiring/
-
 make -j4
-
 sudo make install
 ```
 
@@ -303,9 +260,7 @@ sudo make install
 
 ```
 #include "nightWiring.h"
-
 #include "nightWiringGPIO.h"
-
 #include "stdio.h"
 
 static int fennecGpioMap[] = {
