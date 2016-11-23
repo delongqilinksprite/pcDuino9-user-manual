@@ -40,7 +40,8 @@ pcDuino9是一个高性能平台，拥有强大的多线程运算能力、图形
 
 ## GPIOs 映射
 
-* pcDuino9
+* pcDuino9  
+
 
 |Pin Num|  Name    |Linux GPIO|Pin Num|  Name    |Linux GPIO|
 | ----- |: ------ :|: ------ :|: --- :|: ------ :| --------:|
@@ -65,7 +66,8 @@ pcDuino9是一个高性能平台，拥有强大的多线程运算能力、图形
 | 37    | GPIO_7   |   225    | 38    | UART2_RX |          |
 | 39    | GND      |          | 40    | UART2_RTS|          |
 
-* BMC STM32F411
+* BMC STM32F411   
+
 
 |Pin Num|  Name    |STM32 GPIO|Pin Num|  Name    |STM32 GPIO|
 | ----- |: ------ :|: ------ :|: --- :|: ------ :| --------:|
