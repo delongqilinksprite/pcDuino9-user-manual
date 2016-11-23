@@ -40,6 +40,9 @@ pcDuino9是一个高性能平台，拥有强大的多线程运算能力、图形
 
 ## GPIOs 映射
 
+
+![](images/4.png)
+
 * pcDuino9  
 
 
@@ -66,6 +69,7 @@ pcDuino9是一个高性能平台，拥有强大的多线程运算能力、图形
 | 37    | GPIO_7   |   225    | 38    | UART2_RX |          |
 | 39    | GND      |          | 40    | UART2_RTS|          |
 
+
 * BMC STM32F411   
 
 
@@ -79,6 +83,7 @@ pcDuino9是一个高性能平台，拥有强大的多线程运算能力、图形
 | 51    | BMC_SCL  | PB10     | 52    | SLOT_ID2 |  PB14    |
 | 53    | VDD3.3V  |          | 54    | SLOT_ID3 |  PB15    |
 | 55    | GND      |          | 56    | GND      |          |
+
 
 ## 快速入门
 
