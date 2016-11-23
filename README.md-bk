@@ -45,11 +45,43 @@ pcDuino9是一个高性能平台，拥有强大的多线程运算能力、图形
 
 ##### pcDuino9  
 
-![](images/pin1.png) 
+|Pin Num|  Name    |Linux GPIO|Pin Num|  Name    |Linux GPIO|  
+| ----- |: ------ :|: ------ :|: --- :|: ------ :| --------:|  
+| 1     | 3.3V     |          | 2     |  VDD5V   |          |  
+| 3     | I2C4_SDA |          | 4     |  VDD5V   |          |  
+| 5     | I2C4_SCL |          | 6     |  GND     |          |  
+| 7     | GPIO_0   |   56     | 8     | UART2_TX |          |  
+| 9     | GND      |          | 10    | UART2_RX |          |  
+| 11    | GPIO_1   |   57     | 12    | GPIO_8   | 63       |  
+| 13    | GPIO_2   |   58     | 14    | GND      |          |  
+| 15    | GPIO_3   |   59     | 16    | GPIO_9   | 64       |  
+| 17    | 3.3V     |          | 18    | GPIO_10  | 65       |  
+| 19    |SPI0_MOSI |          | 20    | GND      |          |  
+| 21    |SPI0_MISO |          | 22    | GPIO_11  | 66       |  
+| 23    |SPI0_SCLK |          | 24    | SPI0_CS0 |          |  
+| 25    | GND      |          | 26    | SPI0_CS1 |          |  
+| 27    | I2C3_SDA |          | 28    | I2C3_SCL |          |  
+| 29    | GPIO_4   |   60     | 30    | GND      |          |  
+| 31    | GPIO_5   |   61     | 32    | GPIO_12  | 68       |  
+| 33    | GPIO_6   |   62     | 34    | GND      |          |  
+| 35    | UART3_CTS|          | 36    | UART2_TX |          |  
+| 37    | GPIO_7   |   225    | 38    | UART2_RX |          |  
+| 39    | GND      |          | 40    | UART2_RTS|          |  
+ 
 
 ##### BMC STM32F411     
 
-![](images/pin2.png)
+
+|Pin Num|  Name    |STM32 GPIO|Pin Num|  Name    |STM32 GPIO|  
+| ----- |: ------ :|: ------ :|: --- :|: ------ :| --------:|  
+| 41    | PWM2_CH1 | PA0      | 42    | PWM3_CH1 |  PA8     |  
+| 43    | PWM2_CH2 | PA1      | 44    | PWM3_CH4 |  PA11    |  
+| 45    | PWM2_CH3 | PA2      | 46    | IN9_EXT  |  PB1     |  
+| 47    | PWM2_CH4 | PA3      | 48    | SLOT_ID0 |  PB9     |  
+| 49    | BMC_SDA  | PB12     | 50    | SLOT_ID1 |  PB13    |  
+| 51    | BMC_SCL  | PB10     | 52    | SLOT_ID2 |  PB14    |  
+| 53    | VDD3.3V  | 3.3V     | 54    | SLOT_ID3 |  PB15    |  
+| 55    | GND      | GND      | 56    | GND      |  GND     |  
   
 
 ## 快速入门
