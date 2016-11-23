@@ -1,13 +1,9 @@
 ## 介绍
 
-
-
 ![](images/1.png)
 
 
-
 ![](images/2.png)
-
 
 
 ![](images/3.png)
@@ -18,56 +14,31 @@ pcDuino9是一个高性能平台，拥有强大的多线程运算能力、图形
 ## 规范
 
 * CPU : Rockchip RK3288 ARM Corte-A17 Quad-Core up to 1.8GHz
-
 * GPU : ARM Mali-T760 MP4 Support OpenGL ES 1.1/2.0 /3.0, OpenVG1.1, OpenCL1.1, Directx11
-
 * Memory : 1GB-4GB Dual-channel 32-bit LPDDR3
-
 * Storage : 8GB-16GB eMMC (Opt.), Micro SD slot support SDXC
-
 * Ethernet : 10/100/1000Mbps Ethernet (RTL8211)
-
 * USB : USB 2.0 Host x 2 (Opt.), USB OTG x 1
-
 * Video : HDMI2.0 support maximum 4K@60Hz display (Micro HDMI), LVDS/MIPI-DSI display interface
-
 * Audio : 3.5mm audio In/Out
-
 * Camera : MIPI-CSI camera interface
-
 * WiFi/BT : AP6212 WiFi + BT module
-
 * GPIO Extension : Raspberry Pi compatible GPIO, support UART, SPI, I2C BMC extension GPIO (Opt.), support ADC, PWM, UART, I2C
-
 * Board Size : 96 x 76 mm
-
-
 
 ## 产品参数
 
 * CPU: Rockchip RK3288 ARM Corte-A17 Quad-Core up to 1.8GHz
-
 * GPU: ARM Mali-T760 MP4 Support OpenGL ES 1.1/2.0 /3.0, OpenVG1.1, OpenCL1.1, Directx11
-
 * 内存: 2GB DDR3 双通道
-
 * 存储器 : 16GB eMMC Flash, Micro SD 
-
 * 网络 ：以太网 -10/100/1000M以太网，无线网 -2.4GHz/5GHz双频WiFi，支持802.11a/b/g/n/ac协议，蓝牙 -Bluetooth 4.0
-
 * 视频输入输出：HDMI2.0 up to 3840x2160@60O ,VGA up to 1080P
-
 * USB : USB2.0 x 1
-
 * IR : 支持红外遥控功能
-
 * 电源 ： DC -5V/2.5A
 
-
-
 ## GPIOs 映射
-
-
 
 * pcDuino9
 
@@ -160,56 +131,34 @@ pcDuino9是一个高性能平台，拥有强大的多线程运算能力、图形
 
 ![](images/writesys.png)
 
-
 ###### 烧写分区映像
-
-
 
 烧写分区映像时，请使用对应SDK下的FFTools/AndroidTool.rar烧写。步骤如下：
 
 
-
 * 1.切换至"下载镜像"页。
-
 * 2.勾选需要烧录的分区，可以多选。
-
 * 3.确保映像文件的路径正确，需要的话，点路径右边的空白表格单元格来重新选择。
-
 * 4.点击"执行"按钮开始升级，升级结束后设备会自动重启。
-
-
 
 ![](images/writesys1.png)
 
 #### 2.在Linux烧写系统到eMMC
 
-
-
 RK 提供了一个 Linux 下的命令行工具 upgrade_tool，支持统一固件 update.img 和分区镜像的烧写。
 
-
-
 开源工具则有两个选择:
-
-
 
 * rkflashtool https://github.com/Galland/rkflashtool_rk3066
 
 * rkflashkit https://github.com/linuxerwang/rkflashkit
 
-
-
 它们都仅支持分区映像烧写，不支持统一固件。rkflashtool 是命令行工具，rkflashkit 有图形界面，后加了命令行支持，更是好用。以下仅对 rkflashkit 做介绍。
-
 Linux 下无须安装设备驱动，参照 Windows 章节连接设备则可。
-
 
 ###### upgrade_tool
 
-
-
 下载 [Linux_Upgrade_Tool](https://github.com/delongqilinksprite/pcDuino9-user-manual.git), 并按以下方法安装到系统中，方便调用：
-
 
 
 ```
@@ -222,20 +171,13 @@ sudo mv upgrade_tool /usr/local/bin
 sudo chown root:root /usr/local/bin/upgrade_tool
 ```
 
-
-
 烧写统一固件 uxxxx.img：
-
-
 
 ```
 sudo upgrade_tool uf update.img
 ```
 
-
-
 烧写分区镜像：
-
 
 
 ```
@@ -256,10 +198,7 @@ sudo upgrade_tool di -p paramater   #烧写 parameter
 sudo upgrade_tool ul bootloader.bin # 烧写 bootloader
 ```
 
-
-
 如果因 flash 问题导致升级时出错，可以尝试低级格式化、擦除 nand flash：
-
 
 
 ```
@@ -268,14 +207,9 @@ sudo upgrade_tool lf   # 低级格式化
 sudo upgrade_tool ef   # 擦除
 ```
 
-
-
 ###### rkflashkit
 
-
-
 安装：
-
 
 
 ```
@@ -292,31 +226,22 @@ sudo upgrade_tool ef   # 擦除
  sudo dpkg -i rkflashkit_0.1.2_all.deb
 ```
 
-
-
 图形界面：
-
-
 
 ```
 sudo rkflashkit
 ```
 
-
-
 ![](images/rktool.png)
 
 
-
 命令行:
-
 
 
 ```
 $ rkflashkit --help
 
 Usage: <cmd> [args] [<cmd> [args]...]
-
 
 
 part                              List partition
@@ -331,20 +256,12 @@ erase  @<PARTITION>               Erase partition
 
 reboot                            Reboot device
 
-
-
 For example, flash device with boot.img and kernel.img, then reboot:
-
-
 
 sudo rkflashkit flash @boot boot.img @kernel.img kernel.img reboot
 ```
 
-
-
 #### 3.SD卡启动系统
-
-
 
 * 下载xxxx.img系统镜像
 
@@ -355,12 +272,7 @@ sudo rkflashkit flash @boot boot.img @kernel.img kernel.img reboot
 * 将卡插在pcDuino9，开机需要按着MASKROM键从TF卡启动
 
 
-
-
-
 #### 4.pcDuino9硬件操作
-
-
 
 硬件操作基于NightWiring
 
@@ -369,9 +281,7 @@ sudo rkflashkit flash @boot boot.img @kernel.img kernel.img reboot
 GPIO的功能是基于sysfs的现在，这是稍微慢一点，但灵活。
 
 
-
 * git clone https://github.com/nightseas/nightWiring.git
-
 
 
 ```
@@ -382,11 +292,7 @@ make -j4
 sudo make install
 ```
 
-
-
 ##### GPIO LED控制
-
-
 
 ```
 #include "nightWiring.h"
@@ -395,138 +301,77 @@ sudo make install
 
 #include "stdio.h"
 
-
-
 static int fennecGpioMap[] = {
 
     /*  GPIO2_A0  */
-
             56,
-
     /*  GPIO2_A1,       GPIO2_A2,       GPIO2_A3,       GPIO2_A4    */
-
             57,             58,             59,             60,
-
     /*  GPIO2_A5,       GPIO2_A6,       GPIO7_B1,       GPIO2_A7    */
-
             61,             62,             225,            63,
-
     /*  GPIO2_B0,        GPIO2_B1,      GPIO2_B2,       GPIO2_B4    */
-
             64,             65,             66,             68,
-
     /*  GPIO2_B5,        GPIO7_B0,      GPIO7_A7,       GPIO7_B2    */
-
             69,             224,            223,            226
-
 };
 
 int ledMap[] = {2, 10, 3, 11};
 
 int main(void)
-
 {
-
     int i, j;
-
     nightWiringSetup();
-
     nightWiringGpioSetup(fennecGpioMap, 17);
-
-
-
     for(i=0; i<4; i++)
-
         pinMode(ledMap[i], OUTPUT);
-    
     while(1)
     {
-
         for(i=0; i<4; i++)
-
         {
-
             for(j=0; j<4; j++)
-
                 digitalWrite(ledMap[j], HIGH);
-
             digitalWrite(ledMap[i], LOW);
-
             delay(500);
-
         }
-
     }
-
     return 0;
-
 }
 
-
-
 ``` 
-
-
-
-
 
 ##### GPIO 按键输入
 
 
 ```
 #include "nightWiring.h"
-
 #include "nightWiringGPIO.h"
-
 #include "stdio.h"
 
 static int fennecGpioMap[] = {
-
     /*  GPIO2_A0  */
-
             56,
-
     /*  GPIO2_A1,       GPIO2_A2,       GPIO2_A3,       GPIO2_A4    */
-
             57,             58,             59,             60,
-
     /*  GPIO2_A5,       GPIO2_A6,       GPIO7_B1,       GPIO2_A7    */
-
             61,             62,             225,            63,
-
     /*  GPIO2_B0,        GPIO2_B1,      GPIO2_B2,       GPIO2_B4    */
-
             64,             65,             66,             68,
-
     /*  GPIO2_B5,        GPIO7_B0,      GPIO7_A7,       GPIO7_B2    */
-
             69,             224,            223,            226
-
 };
 
-
-
 int keyMap[] = {6, 13, 4, 12, 5};
-
 char keyName[5][7] = {"UP\0", "CENTER\0", "DOWN\0", "LEFT\0", "RIGHT\0"};     
 
 int readKey(int num)
 {
-
     int key = digitalRead(keyMap[num]);
-
     if(key == LOW)
-
     {
-
         // Delay for a while and re-detect the key status
-
         // Filtering glitches on the signal
-
         delay(10);
-
         if(key == LOW)
-
             return 1;
     }
 
@@ -535,39 +380,23 @@ int readKey(int num)
 
 int main(void)
 {
-
     int i;
-
     nightWiringSetup();
-
     nightWiringGpioSetup(fennecGpioMap, 17);
-
     for(i=0; i<5; i++)
-
         pinMode(keyMap[i], INPUT);
-
     while(1)
     {
         for(i=0; i<5; i++)
-
         {
-
             if(readKey(i))
-
             {
-
                 printf("Key %s is pressed!\n", keyName[i]);
-
                 delay(500);
-
             }          
-
         }
-
     }
-
     return 0;
-
 }
 ```
 
@@ -587,101 +416,63 @@ int main(void)
 #define DS1307_ADDR 0x68
 
 int i2cFd;
-
 int quitFlag = 0;
 
 unsigned char DEC2BCD(unsigned char val)
 {
-
    return ( (val/10*16) + (val%10) );
 
 }
 
 unsigned char BCD2DEC(unsigned char val)
 {
-
    return ( (val/16*10) + (val%16) );
-
 }
 
 
 void rtcSetTime(unsigned char year, unsigned char month, unsigned char date, unsigned char dayofWeek, unsigned char hour, unsigned char min ,unsigned char sec)
 {
-
   unsigned char reg = 0x00;
-
   i2cWriteReg8(i2cFd, 0x00, DEC2BCD(sec));
-
   i2cWriteReg8(i2cFd, 0x01, DEC2BCD(min));
-
   i2cWriteReg8(i2cFd, 0x02, DEC2BCD(hour));
-
   i2cWriteReg8(i2cFd, 0x03, DEC2BCD(dayofWeek));
-
   i2cWriteReg8(i2cFd, 0x04, DEC2BCD(date));
-
   i2cWriteReg8(i2cFd, 0x05, DEC2BCD(month));
-
   i2cWriteReg8(i2cFd, 0x06, DEC2BCD(year));   
-
 }
 
 void rtcGetTime() 
 {
-
   unsigned char year, month, date, dayofWeek, hour, min ,sec;
-
   unsigned char reg = 0x00;
-
   sec       = BCD2DEC(i2cReadReg8(i2cFd, 0x00) & 0x7f);
-
   min       = BCD2DEC(i2cReadReg8(i2cFd, 0x01));
-
   hour      = BCD2DEC(i2cReadReg8(i2cFd, 0x02) & 0x3f);
-
   dayofWeek = BCD2DEC(i2cReadReg8(i2cFd, 0x03));
-
   date      = BCD2DEC(i2cReadReg8(i2cFd, 0x04));
-
   month     = BCD2DEC(i2cReadReg8(i2cFd, 0x05));
-
   year      = BCD2DEC(i2cReadReg8(i2cFd, 0x06));
-
   printf("Time: %02d-%02d-%02d  %02d:%02d:%02d.\n", year, month, date, hour, min ,sec);
-
 }
 
 int main(void)
 {
-
     int i;
-
     if((i2cFd=i2cSetup("/dev/i2c-4", DS1307_ADDR)) < 0)
-
     {
-
         printf("Error: I2C acess failed! i2cSetup() return %d\n",i2cFd);
-
         return 0;
-
     }
-
     printf("I2C interface init complete.\n");
-
     printf("Writing time 2016-10-01 Sat 21:10:00 to RTC...\n");
     rtcSetTime(16,10,1,6,21,10,0);
-
     while(1)
     {
-
         rtcGetTime();
-
         delay(1000);
-
     }
-
     return 0;
-
 }
 ```
 
